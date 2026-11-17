@@ -1,6 +1,3 @@
-
-#Ashrith Meda Chapter 3 Exercises
-#1 
 dayNum = int(input("Enter a day number (1-7): "))
 
 if dayNum == 1:
@@ -238,7 +235,58 @@ print("Hours:", hours)
 print("Minutes:", minutes)
 print("Seconds:", seconds)
 
-#15(Feburary Project)
+#15 
+year = int(input("Enter a year: "))
+
+if year % 100 == 0:
+    if year % 400 == 0:
+        february_days = 29
+    else:
+        february_days = 28
+else:
+    if year % 4 == 0:
+        february_days = 29
+    else:
+        february_days = 28
+
+print("The number of days in February that year is:", february_days)
+
+#16
+print("Welcome to the Wi-Fi Troubleshooting Program.")
+print("Please follow the steps below to troubleshoot your Wi-Fi connection.")
+print("Step 1: Reboot the computer and try to connect.")
+response = input("Did that fix the problem? (yes/no): ")
+if response.lower() == "yes":
+    print("Great!")
+else:
+    print("Step 2: Reboot the router and try to connect.")
+    response = input("Did that fix the problem? (yes/no): ")
+    if response.lower() == "yes":
+        print("Great!")
+    else:
+        print("Step 3: Make sure the cables between the router and modem are plugged in firmly.")
+        response = input("Did that fix the problem? (yes/no): ")
+        if response.lower() == "yes":
+            print("Great!")
+        else:
+            print("Step 4: Move the router to a new location.")
+            response = input("Did that fix the problem? (yes/no): ")
+            if response.lower() == "yes":
+                print("Great!")
+            else:
+                print("Step 5: Get a new router.")
+                print("Buy a new router.")
+                
+#17
+vegetarian = input("Are members of your party vegetarians? (yes/no): ")
+vegan = input("Are members of your party vegans? (yes/no): ")
+gluten_free = input("Are members of your party gluten-free? (yes/no): ")
 
 
+if vegetarian.lower() == "yes" and vegan.lower() == "no" and gluten_free.lower() == "no":
+    print("You can go to Main Street Pizza Company, Corner Café, Mama’s Fine Italian, or The Chef’s Kitchen.")
+elif vegetarian.lower() == "yes" and vegan.lower() == "yes" and gluten_free.lower() == "yes":
+    print("You can go to Corner Café or The Chef’s Kitchen.")
+elif vegetarian.lower() == "yes" and vegan.lower() == "no" and gluten_free.lower() == "yes":
+    print("You can go to Main Street Pizza Company, Corner Café, or The Chef’s Kitchen.")
 
